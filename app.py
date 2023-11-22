@@ -86,6 +86,9 @@ def main():
                 
         except IndexError:
             st.error("No movies selected.")
+        
+        except TypeError:
+            st.error("Currently we don't have any information about this movie.")
             
             
 if __name__=="__main__": 

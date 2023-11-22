@@ -6,7 +6,7 @@ The Recommendations are made by computing similarity scores for movies using cos
 
 ## System Architecture
 
-![Recommendation App]([image/System Architecture.jpg](https://github.com/soumadeep-dey/Movie-Recommendation-System/blob/8ae1db904d3aad26bfcc4c08b35eb9f7692639f2/image/System%20Architecture.jpg))
+
 
 
 ## How Cosine Similarity works?

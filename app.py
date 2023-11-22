@@ -13,9 +13,12 @@ def configure():
     load_dotenv()
     
 def fetch_poster(movie_id):
-    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={os.getenv('API_KEY')}&language=en-US")
-    data = response.json()
-    return "https://image.tmdb.org/t/p/original"+data['poster_path']
+    try:
+        response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={os.getenv('API_KEY')}&language=en-US")
+        data = response.json()
+        return "https://image.tmdb.org/t/p/original"+data['poster_path']
+    except:
+            return "image/no-poster.png"
 
 def recommend(movie):
     movie_index = movies_df[movies_df['title'] == movie].index[0]
@@ -86,10 +89,9 @@ def main():
                 
         except IndexError:
             st.error("No movies selected.")
-        
+            
         except TypeError:
             st.error("Currently we don't have any information about this movie.")
-            
             
 if __name__=="__main__": 
     main()

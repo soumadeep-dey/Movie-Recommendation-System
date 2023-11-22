@@ -1,4 +1,5 @@
 .venv
+image
 .pass
 app_copy.py
 .env

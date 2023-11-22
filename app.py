@@ -6,7 +6,7 @@ import os
 
 # Load Data
 movies_df = pickle.load(open('data/pkl_data/movies_df.pkl','rb'))
-similarity = pickle.load(open('data/pkl/similarity.pkl','rb'))
+similarity = pickle.load(open('data/pkl_data/similarity.pkl','rb'))
 
 # Function:
 def configure():

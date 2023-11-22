@@ -1,5 +1,6 @@
 # Content Based Movie Recommendation System using Streamlit
 ![Python](https://img.shields.io/badge/Python-3.10-blue) ![Frontend](https://img.shields.io/badge/Frontend-Streamlit-red) ![API](https://img.shields.io/badge/API-TMDB-fcba03)
+
 A content-based recommender system that recommends movies similar to the movie the user likes using cosine similarity score.
 
 The Recommendations are made by computing similarity scores for movies using cosine similarity. For each movie tags are created by combining various details like genre of the movie, title, top cast, director and then they are converted to vectors using which similarity matrix is formed. Then for any searched movie the movies with the largest similarity score with it are sorted and then recommended.

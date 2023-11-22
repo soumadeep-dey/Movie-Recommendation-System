@@ -1,0 +1,7 @@
+.venv
+image
+.pass
+app_copy.py
+.env
+__pycache__
+.ipynb_checkpoints

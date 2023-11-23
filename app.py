@@ -23,7 +23,7 @@ def fetch_poster(movie_id):
 def recommend(movie):
     movie_index = movies_df[movies_df['title'] == movie].index[0]
     distances = similarity[movie_index]
-    movies_list = sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:21]
+    movies_list = sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:16]
     
     recommended_movies = []
     recommended_movies_poster = []
@@ -33,7 +33,6 @@ def recommend(movie):
         # Fetch poster from API
         recommended_movies_poster.append(fetch_poster(id))
     return recommended_movies,recommended_movies_poster
-
 
 # Web App
 def main():
@@ -46,8 +45,11 @@ def main():
         placeholder = "Choose a movie",
         index=None)
 
-
-    if st.button('Recommend'):            
+    if st.button('Recommend'):  
+        if selected_movie == None:
+            st.error("No movies selected.")
+            exit()   
+                     
         try:    
             names,posters = recommend(selected_movie)
             col1, col2, col3, col4, col5 = st.columns(5)
@@ -111,9 +113,6 @@ def main():
 
                 
         except IndexError:
-            st.error("No movies selected.")
-            
-        except TypeError:
             st.error("Currently we don't have any information about this movie.")
             
 if __name__=="__main__": 

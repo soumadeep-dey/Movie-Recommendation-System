@@ -23,7 +23,7 @@ def fetch_poster(movie_id):
 def recommend(movie):
     movie_index = movies_df[movies_df['title'] == movie].index[0]
     distances = similarity[movie_index]
-    movies_list = sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:11]
+    movies_list = sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:21]
     
     recommended_movies = []
     recommended_movies_poster = []
@@ -58,6 +58,11 @@ def main():
                 
                 st.text(names[5])
                 st.image(posters[5])
+                
+                st.text(names[10])
+                st.image(posters[10])
+                
+
 
             with col2:
                 st.text(names[1])
@@ -66,12 +71,22 @@ def main():
                 st.text(names[6])
                 st.image(posters[6])
                 
+                st.text(names[11])
+                st.image(posters[11])
+                
+
+                
             with col3:
                 st.text(names[2])
                 st.image(posters[2])
                 
                 st.text(names[7])
                 st.image(posters[7])
+                
+                st.text(names[12])
+                st.image(posters[12])
+                
+
 
             with col4:
                 st.text(names[3])
@@ -79,6 +94,10 @@ def main():
                 
                 st.text(names[8])
                 st.image(posters[8])
+                
+                st.text(names[13])
+                st.image(posters[13])
+                
             
             with col5:
                 st.text(names[4])
@@ -86,6 +105,10 @@ def main():
                 
                 st.text(names[9])
                 st.image(posters[9])
+                
+                st.text(names[14])
+                st.image(posters[14])
+
                 
         except IndexError:
             st.error("No movies selected.")

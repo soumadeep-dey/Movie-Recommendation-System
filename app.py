@@ -36,8 +36,23 @@ def recommend(movie):
 
 # Web App
 def main():
+    # ENV Config
     configure()
+    
+    # Streamlit Config
     st.set_page_config(page_title="Movie Recommender", page_icon=":camera:", layout="wide")
+    
+    # Hide default styles
+    hide_st_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        button[title="View fullscreen"] {visibility: hidden;}
+        </style>
+    """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
+    
+    # Web Components
     st.title('Movie Recommendation System')
     selected_movie = st.selectbox(
         label="Select a movie",
@@ -45,7 +60,8 @@ def main():
         placeholder = "Choose a movie",
         index=None)
 
-    if st.button('Recommend'):  
+    if st.button('Recommend'): 
+        # No movies selected 
         if selected_movie == None:
             st.error("No movies selected.")
             exit()   
@@ -64,8 +80,6 @@ def main():
                 st.text(names[10])
                 st.image(posters[10])
                 
-
-
             with col2:
                 st.text(names[1])
                 st.image(posters[1])
@@ -75,9 +89,7 @@ def main():
                 
                 st.text(names[11])
                 st.image(posters[11])
-                
-
-                
+                             
             with col3:
                 st.text(names[2])
                 st.image(posters[2])
@@ -88,8 +100,6 @@ def main():
                 st.text(names[12])
                 st.image(posters[12])
                 
-
-
             with col4:
                 st.text(names[3])
                 st.image(posters[3])
@@ -100,7 +110,6 @@ def main():
                 st.text(names[13])
                 st.image(posters[13])
                 
-            
             with col5:
                 st.text(names[4])
                 st.image(posters[4])
@@ -110,8 +119,7 @@ def main():
                 
                 st.text(names[14])
                 st.image(posters[14])
-
-                
+       
         except IndexError:
             st.error("Currently we don't have any information about this movie.")
             

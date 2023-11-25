@@ -24,7 +24,7 @@ The Recommendations are made by computing similarity scores for movies using cos
 
 More about Cosine Similarity : [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
-## How to run the project?
+## How to run the project locally?
 
 1. Clone or download this repository to your local machine.
 2. `cd` into the cloned folder.

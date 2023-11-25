@@ -38,6 +38,7 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
    ```
    python3 -m venv [Enter Folder name]
    ```
+
    Activate virtual environment using command:
 5. ```
    source [virtual environment name]/bin/activate
@@ -68,7 +69,7 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
     ```
     streamlit run app.py
     ```
-12. The streamlit app will locally run on your browser using your default browser or run it manually in any browser by entering the local url provided in your terminal like:
+12. The streamlit app will locally run on your browser using your default browser or run it manually in any browser by  the local url provided in your terminal like:
 
     ```
      You can now view your Streamlit app in your browser.
@@ -77,4 +78,5 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
       Network URL: http://192.168.0.103:8501
 
     ```
-13. Hurray! That's it.
+
+Hurray! That's it. 🥳

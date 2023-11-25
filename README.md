@@ -38,9 +38,9 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
    ```
    python3 -m venv [Enter Folder name]
    ```
+5. Activate virtual environment using command:
 
-   Activate virtual environment using command:
-5. ```
+   ```
    source [virtual environment name]/bin/activate
    ```
 6. Install all the libraries mentioned in the [requirements.txt](https://github.com/soumadeep-dey/Movie-Recommendation-System/blob/main/requirements.txt) file with the command:

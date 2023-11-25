@@ -1,8 +1,6 @@
 # Content Based Movie Recommendation System using Streamlit
 
-![Python](https://img.shields.io/badge/Python-3.10-fcba03) ![Frontend](https://img.shields.io/badge/Frontend-Streamlit-red) ![API](https://img.shields.io/badge/API-TMDB-237a3b) ![API](https://img.shields.io/badge/ML-Numpy_|_Pandas_|_NLTK_|_Scikit_learn_|_Count_Vectorizer_|_Cosine_Similarity-blue)
-
-#### 🔗 *Movie Recommendation Website* 👉 [click here ](https://movie-recommendation-system-sd.streamlit.app/)
+#### 🔗 *[Movie Recommendation Website](https://movie-recommendation-system-sd.streamlit.app/)*
 
 A content-based movie recommendation system that recommends movies based on user preferences using cosine similarity.
 
@@ -25,3 +23,50 @@ The Recommendations are made by computing similarity scores for movies using cos
    It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
 
 More about Cosine Similarity : [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
+
+## How to run the project?
+
+1. Clone or download this repository to your local machine.
+2. `cd` into the cloned folder.
+3. Install virtual environment python package using command:
+
+   ```
+   pip install virtualenv
+   ```
+4. Create a virtual environment using command:
+5. ```
+   python3 -m venv [Enter Folder name]
+   ```
+6. Activate virtual environment using command:
+
+   ```
+   source [virtual environment name]/bin/activate
+   ```
+7. Install all the libraries mentioned in the [requirements.txt](https://github.com/soumadeep-dey/Movie-Recommendation-System/blob/main/requirements.txt) file with the command:
+
+   ```
+    pip install -r requirements.txt
+   ```
+8. Install ipykernel using command:
+
+   ```
+   pip install ipykernel
+   ```
+9. Create a kernel user using command:
+
+   ```
+   ipython kernel install --user --name=[Enter kernel_name]
+   ```
+10. Get your API key from [themoviedb.org](https://www.themoviedb.org/settings/api)
+11. Create a .env file and paste the API key insde the file as follows:
+
+    ```
+    API_KEY = YOUR_API_KEY
+    ```
+12. Run the file `app.py` by executing the command:
+
+    ```
+    streamlit run app.py
+    ```
+13. The streamlit app will locally run on your browser using your default browser.
+14. Hurray! That's it.

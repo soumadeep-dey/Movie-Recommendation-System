@@ -69,7 +69,7 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
     ```
     streamlit run app.py
     ```
-12. The streamlit app will locally run on your browser using your default browser or run it manually in any browser by  the local url provided in your terminal like:
+12. The streamlit app will locally run on your browser using your default browser or run it manually in any browser using  the local url provided in your terminal like:
 
     ```
      You can now view your Streamlit app in your browser.

@@ -34,39 +34,39 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
    pip install virtualenv
    ```
 4. Create a virtual environment using command:
-5. ```
-   python3 -m venv [Enter Folder name]
-   ```
-6. Activate virtual environment using command:
 
    ```
+   python3 -m venv [Enter Folder name]
+   ```
+   Activate virtual environment using command:
+5. ```
    source [virtual environment name]/bin/activate
    ```
-7. Install all the libraries mentioned in the [requirements.txt](https://github.com/soumadeep-dey/Movie-Recommendation-System/blob/main/requirements.txt) file with the command:
+6. Install all the libraries mentioned in the [requirements.txt](https://github.com/soumadeep-dey/Movie-Recommendation-System/blob/main/requirements.txt) file with the command:
 
    ```
     pip install -r requirements.txt
    ```
-8. Install ipykernel using command:
+7. Install ipykernel using command:
 
    ```
    pip install ipykernel
    ```
-9. Create a kernel user using command:
+8. Create a kernel user using command:
 
    ```
    ipython kernel install --user --name=[Enter kernel_name]
    ```
-10. Get your API key from [themoviedb.org](https://www.themoviedb.org/settings/api)
-11. Create a .env file and paste the API key insde the file as follows:
+9. Get your API key from [themoviedb.org](https://www.themoviedb.org/settings/api)
+10. Create a `.env` file and paste the API key insde the file as follows:
 
     ```
     API_KEY = YOUR_API_KEY
     ```
-12. Run the file `app.py` by executing the command:
+11. Run the file `app.py` by executing the command:
 
     ```
     streamlit run app.py
     ```
-13. The streamlit app will locally run on your browser using your default browser.
-14. Hurray! That's it.
+12. The streamlit app will locally run on your browser using your default browser.
+13. Hurray! That's it.

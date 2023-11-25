@@ -1,6 +1,6 @@
 # Content Based Movie Recommendation System using Streamlit
 
-![Python](https://img.shields.io/badge/Python-3.10-blue) ![Frontend](https://img.shields.io/badge/Frontend-Streamlit-red) ![API](https://img.shields.io/badge/API-TMDB-fcba03) ![API](https://img.shields.io/badge/ML-Numpy_|_Pandas_|_NLTK_|_Scikit_learn_|_CountVectorizer_|_cosine_similarity-237a3b)
+![Python](https://img.shields.io/badge/Python-3.10-blue) ![Frontend](https://img.shields.io/badge/Frontend-Streamlit-red) ![API](https://img.shields.io/badge/API-TMDB-fcba03) ![API](https://img.shields.io/badge/ML-Numpy_|_Pandas_|_NLTK_|_Scikit_learn_|_Count_Vectorizer_|_Cosine_Similarity-237a3b)
 
 #### 🔗 *Movie Recommendation Website* [click here ](https://movie-recommendation-system-sd.streamlit.app/)
 

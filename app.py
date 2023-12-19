@@ -1,12 +1,22 @@
 import streamlit as st
 import pickle
+import bz2file as bz2
 import requests
 from dotenv import load_dotenv
 import os
 
 # Load Data
-movies_df = pickle.load(open('data/pkl_data/movies_df.pkl','rb'))
-similarity = pickle.load(open('data/pkl_data/similarity.pkl','rb'))
+def decompress_pickle(file):
+    data = bz2.BZ2File(file, 'rb')
+    data = pickle.load(data)
+    return data
+
+movies_df = decompress_pickle('data/pkl_data/movies_df.pbz2')
+similarity = decompress_pickle('data/pkl_data/similarity.pbz2')
+
+
+# movies_df = pickle.load(open('data/pkl_data/movies_df.pkl','rb'))
+# similarity = pickle.load(open('data/pkl_data/similarity.pkl','rb'))
 
 # Function:
 def configure():

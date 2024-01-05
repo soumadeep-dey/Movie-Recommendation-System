@@ -5,6 +5,7 @@ import requests
 from dotenv import load_dotenv
 import os
 
+import joblib
 # Load Data
 def decompress_pickle(file):
     data = bz2.BZ2File(file, 'rb')
@@ -13,6 +14,8 @@ def decompress_pickle(file):
 
 movies_df = decompress_pickle('data/pkl_data/movies_df.pbz2')
 similarity = decompress_pickle('data/pkl_data/similarity.pbz2')
+# movies_df = pickle.load(open('data/pkl_data/movies_df.pkl','rb'))
+# similarity = pickle.load(open('data/pkl_data/similarity.pkl','rb'))
 
 # Function:
 def configure():

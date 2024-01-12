@@ -1,23 +1,24 @@
 import streamlit as st
 import pickle
-import bz2file as bz2
 import requests
 from dotenv import load_dotenv
 import os
+import zstandard as zstd
 
-import joblib
-# Load Data
-def decompress_pickle(file):
-    data = bz2.BZ2File(file, 'rb')
-    data = pickle.load(data)
-    return data
+# Load Data and Decompress
+def decompress_with_zstd(file_path):
+    with open(file_path, 'rb') as f:
+        compressed_data = f.read()
+    # Decompress using Zstandard
+    dc = zstd.ZstdDecompressor()
+    decompressed_data = dc.decompress(compressed_data)
+    # Load the model from the decompressed data
+    loaded_model = pickle.loads(decompressed_data)
+    return loaded_model
 
-movies_df = decompress_pickle('data/pkl_data/movies_df.pbz2')
-similarity = decompress_pickle('data/pkl_data/similarity.pbz2')
-# movies_df = pickle.load(open('data/pkl_data/movies_df.pkl','rb'))
-# similarity = pickle.load(open('data/pkl_data/similarity.pkl','rb'))
+movies_df = decompress_with_zstd('data/pkl_data/movies_df.zstd')
+similarity = decompress_with_zstd('data/pkl_data/similarity.zstd')
 
-# Function:
 def configure():
     load_dotenv()
     

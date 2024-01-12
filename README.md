@@ -4,6 +4,8 @@
 
 A content-based movie recommendation system that recommends movies based on user preferences using cosine similarity.
 
+Extensively trained the model on a diverse dataset of over ***7,500 movies***, including a substantial collection of ***2,850 Indian*** regional films.
+
 The Recommendations are made by computing similarity scores for movies using cosine similarity. For each movie tags are created by combining various details like genre of the movie, title, top cast, director and then they are converted to vectors using which similarity matrix is formed. Then for any searched movie the movies with the largest similarity score with it are sorted and then recommended.
 
 ## System Architecture

@@ -2,6 +2,8 @@
 
 #### 🔗 *[Movie Recommendation Website](https://movie-recommendation-system-sd.streamlit.app/)*
 
+![Python](https://img.shields.io/badge/Python-3.10-fcba03) ![Frontend](https://img.shields.io/badge/Frontend-Streamlit-red) ![API](https://img.shields.io/badge/API-TMDB-237a3b) ![API](https://img.shields.io/badge/ML-Numpy_|_Pandas_|_NLTK_|_Scikit_learn_|_Count_Vectorizer_|_Cosine_Similarity-blue)
+
 A content-based movie recommendation system that recommends movies based on user preferences using cosine similarity.
 
 Extensively trained the model on a diverse dataset of over ***7,500 movies***, including a substantial collection of ***2,850 Indian*** regional films.
